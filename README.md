@@ -6,4 +6,6 @@
 
 右側の地図が最初小さいが、ウィンドウサイズを変更すれば、全画面になります……。
 
+https://mghs15.github.io/gsimaps-vector-dual_pre/
+
 
