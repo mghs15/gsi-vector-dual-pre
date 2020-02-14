@@ -158,8 +158,8 @@
     </div>
 
     <div class="content">
-      <div class="map" style="position: absolute;top: 0; bottom: 0;width: 50%;"></div>
-      <div id="mapright" style="left:50%;"></div>
+      <div class="map"  class="maps" style="position: absolute;top: 0; bottom: 0;width: 50%;"></div>
+      <div id="mapright" class="maps" style="left:50%;"></div>
     </div>
 
     <div id="left-panel">
@@ -543,6 +543,7 @@
   </div>
   
   <script type="text/javascript">
+  
     if (!GSIBV.application) { window.onload = function () { document.getElementById("incompatible").style.display = 'block'; }; }
     
     var adjustZoom = 0;
@@ -560,9 +561,7 @@
     mapright.addControl(new mapboxgl.ScaleControl() );
     mapright.showTileBoundaries = true;
     
-    
-  
-    changedualpara = function(){
+    var changedualpara = function(){
       if(adjustZoom < 0.5){
         adjustZoom = 1;
       }else{
@@ -571,7 +570,7 @@
       console.log(adjustZoom);
       console.log(mapright.getZoom());
     }
-    
+   
   </script>
 </body>
 </html>

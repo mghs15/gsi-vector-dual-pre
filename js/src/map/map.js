@@ -145,7 +145,45 @@ GSIBV.Map = class extends MA.Class.Base {
     map.on("move",debug);
     */
     
-    //191202
+    //200214========================================================================================
+    /*
+    var adjustZoom = 0;
+    var changedualpara = function(){
+        if(adjustZoom < 0.5){
+          adjustZoom = 1;
+        }else{
+          adjustZoom = 0;
+        }
+        console.log(adjustZoom);
+        console.log(mapright.getZoom());
+    }
+      
+    map.on('load', function () {
+      console.log("main panel has been loaded");
+      if (!GSIBV.application) { window.onload = function () { document.getElementById("incompatible").style.display = 'block'; }; }
+      
+      var mapright = new mapboxgl.Map({
+        container: 'mapright', // container id
+        style: './data/stdr.json', // stylesheet location
+        center: [139.78148, 35.768793], // starting position [lng, lat]
+        zoom: 5, // starting zoom
+        localIdeographFontFamily: false
+      });
+      
+      mapright.addControl(new mapboxgl.NavigationControl(), 'bottom-right');
+      mapright.addControl(new mapboxgl.ScaleControl() );
+      mapright.showTileBoundaries = true;
+      
+    });
+    */
+    
+    map.on('load', function () {
+      mapright.resize();
+    });
+    
+    //200214ここまで===================================================================================
+    
+    //191202 ========================================================================================
 
     map.on('move', function (e) {
 
@@ -163,8 +201,9 @@ GSIBV.Map = class extends MA.Class.Base {
     
     map.showTileBoundaries = true;
     
-    //191202ここまで
+    //191202ここまで===================================================================================
     
+
     
     this._map = map;
 
