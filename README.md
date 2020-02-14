@@ -2,7 +2,7 @@
 
 [地理院地図Vector](https://maps.gsi.go.jp/vector/)を雑に改造。
 
-https://mghs15.github.io/gsi-vector-dual_pre/
+https://mghs15.github.io/gsi-vector-dual-pre/
 
 ## 参考文献
 * Mapbox GL JS API Reference <br> https://docs.mapbox.com/mapbox-gl-js/api/
